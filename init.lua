@@ -15,4 +15,9 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- Vim editor configuration
+vim.cmd('set number')
+vim.cmd('set tabstop=4')
+vim.cmd('set shiftwidth=4')
+
 require("lazy").setup("plugins")
