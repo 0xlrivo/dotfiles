@@ -18,6 +18,7 @@ return {
 				ensure_installed = {
 					"lua_ls", -- Lua
 					"clangd", -- C
+					"ts_ls" -- Typescript
 				}
 			})
 		end
@@ -27,11 +28,19 @@ return {
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities();
 			local lspconfig = require("lspconfig")
+
+			-- LUA language
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities
 			})
+
+			-- C language
 			lspconfig.clangd.setup({
 				capabilities = capabilities
+			})
+
+			-- Typescript
+			lspconfig.ts_ls.setup({
 			})
 		end
 	}
