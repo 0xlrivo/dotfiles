@@ -39,6 +39,11 @@ return {
 				capabilities = capabilities
 			})
 
+			-- Rust
+			lspconfig.rust_analyzer.setup({
+				capabilities = capabilities
+			})
+
 			-- Typescript
 			lspconfig.ts_ls.setup({
 			})

@@ -11,3 +11,4 @@ return {
 		vim.keymap.set('n', '<leader>l', builtin.live_grep, { desc = 'Telescope live grep' })
 	end
 }
+
