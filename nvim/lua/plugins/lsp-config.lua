@@ -18,6 +18,7 @@ return {
 				ensure_installed = {
 					"lua_ls", -- Lua
 					"clangd", -- C
+					"rust_analyzer", -- Rust
 					"ts_ls" -- Typescript
 				}
 			})
