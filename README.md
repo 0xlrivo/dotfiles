@@ -1,11 +1,17 @@
-# 0xlrivo's Linux Development Settings
+# 0xlrivo's dotfiles 
 
-> my entire linux development configuration settings for terminal-only experience
+## Setup
+
+1. clone this repo in your home under the name .dotfiles
+2. create a symbolic link ~/.config/hypr -> ~/.dotfiles/hypr
+3. create a symbolic link ~/.config/nvim -> ~/.dotfiles/nvim
 
 ## oh-my-zsh
+
 > simply install it from the [official homepage](https://ohmyz.sh/)
 
 ### git plugin commands
+
 Here I'll report the foundamental ones I'll probably need to remember:
 - `gst` : git status
 - `gcam`: git commit --all --message
@@ -15,14 +21,8 @@ Here I'll report the foundamental ones I'll probably need to remember:
 
 Anyways the full list is [here](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git)
 
-## nvim
-To setup nvim you simply need to create a symlink inside ~/.config that points to the nvim/ in this directory
+## nvim keybindings
 
-```bash
-ln -s ~/.lrivo-linux-config/nvim ~/.config/nvim
-```
-
-### keybindings
 - `space+b`: open Oil file explorer
 - `space+p`: file search
 - `space+l`: live grep

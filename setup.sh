@@ -1,6 +1,7 @@
 #!/bin/bash
 
+THIS="$HOME/.dotfiles"
 CONFIG_DIR="$HOME/.config"
 
 # 1. nvim config
-ln -s "$HOME/.lrivo-linux-config/nvim" "$CONFIG_DIR/nvim"
+ln -s "$THIS/nvim" "$CONFIG_DIR/nvim"
