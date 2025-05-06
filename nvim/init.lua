@@ -25,4 +25,23 @@ vim.cmd('set number')
 vim.cmd('set tabstop=4')
 vim.cmd('set shiftwidth=4')
 
+vim.diagnostic.config({
+  virtual_text = true, -- Show inline diagnostics
+  signs = true,        -- Show signs in the gutter
+  update_in_insert = false,
+  underline = true,
+  severity_sort = true,
+  float = {
+    source = "always",
+    border = "rounded",
+  },
+})
+
+-- Show diagnostic in a floating window on CursorHold
+vim.api.nvim_create_autocmd("CursorHold", {
+  callback = function()
+    vim.diagnostic.open_float(nil, { focus = false })
+  end,
+})
+
 require("lazy").setup("plugins")

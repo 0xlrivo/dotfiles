@@ -32,7 +32,8 @@ return {
 
 			-- LUA language
 			lspconfig.lua_ls.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
+				cmd = { "clangd", "--background-index" }
 			})
 
 			-- C language
