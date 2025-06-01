@@ -106,6 +106,7 @@ source $ZSH/oh-my-zsh.sh
 # +-- Aliases --+
 alias vi="nvim"
 alias ls="exa -1 --icons"
+alias rpi="ssh lrivo@raspberrypi"
 
 # Hyperland aliases
 alias hyprconfig="nvim $HOME/.config/hypr/hyprland.conf"

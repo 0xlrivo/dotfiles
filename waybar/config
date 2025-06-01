@@ -2,13 +2,27 @@
     "modules-left": ["hyprland/window"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["network", "pulseaudio", "clock", "custom/power"],
-
+	
+	"hyprland/workspaces": {
+		"active-only": false,
+		"all-outputs": true,
+		"show-special": true,
+		"format": "{id}:{icon}",
+		"format-window-separator": " ",
+		"format-icons": {
+			"1": "",
+			"2": "",
+			"3": "󰎚",
+			"4": "",
+			"5": "",
+			"default": ""
+		}
+	},
     "network": {
         "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "{ifname} ",
         "format-disconnected": "", 
         "max-length": 50,
-        "on-click": "kitty -e 'nmtui'"
     },
     "clock": {
         "format": "{:%Y-%m-%d - %H:%M}"

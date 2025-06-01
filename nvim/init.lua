@@ -1,6 +1,5 @@
--- leader = SPACE
+-- LEADER key = SPACE
 vim.g.mapleader = " "
-
 vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
 
 -- Bootstrap lazy.nvim
@@ -25,6 +24,9 @@ vim.cmd('set number')
 vim.cmd('set tabstop=4')
 vim.cmd('set shiftwidth=4')
 
+require("lazy").setup("plugins")
+
+-- Autoshows diagnostics next to the code lines
 vim.diagnostic.config({
   virtual_text = true, -- Show inline diagnostics
   signs = true,        -- Show signs in the gutter
@@ -36,12 +38,9 @@ vim.diagnostic.config({
     border = "rounded",
   },
 })
-
 -- Show diagnostic in a floating window on CursorHold
 vim.api.nvim_create_autocmd("CursorHold", {
   callback = function()
     vim.diagnostic.open_float(nil, { focus = false })
   end,
 })
-
-require("lazy").setup("plugins")

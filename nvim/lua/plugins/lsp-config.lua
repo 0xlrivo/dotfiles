@@ -19,6 +19,7 @@ return {
 					"lua_ls", -- Lua
 					"clangd", -- C
 					"rust_analyzer", -- Rust
+					"solidity_ls",
 					"ts_ls" -- Typescript
 				}
 			})
@@ -33,7 +34,7 @@ return {
 			-- LUA language
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
-				cmd = { "clangd", "--background-index" }
+				cmd = { "clangd", "--compile-commands-dir=." }
 			})
 
 			-- C language
@@ -46,8 +47,16 @@ return {
 				capabilities = capabilities
 			})
 
+			-- Solidity
+			lspconfig.solidity_ls.setup({
+				capabilities = capabilities,
+				on_attach = on_attach,
+				filetypes = {"solidity"}
+			})
+
 			-- Typescript
 			lspconfig.ts_ls.setup({
+				capabilities = capabilities
 			})
 		end
 	}
