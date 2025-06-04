@@ -1,0 +1,39 @@
+# Path to your Oh My Zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+source $ZSH/oh-my-zsh.sh
+
+# THEME
+ZSH_THEME="robbyrussell"
+
+# PLUGINS
+plugins=(
+	git
+	zsh-autosuggestions
+)
+
+# +-- Aliases --+
+alias vi="nvim"
+alias ls="exa -1 --icons"
+alias rpi="ssh lrivo@raspberrypi"
+
+# Hyperland aliases
+alias hyprconfig="nvim $HOME/.config/hypr/hyprland.conf"
+alias hyprpaperconfig="nvim $HOME/.config/hypr/hyprpaper.conf"
+
+# +-- Environment Variables --+
+# Rustup/Cargo/Rustc
+. "$HOME/.cargo/env"
+
+# thefuck
+eval $(thefuck --alias)
+
+# Node Version Manager (NVM)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Solana CLI
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+
+# Created by `pipx` on 2025-05-01 14:44:01
+export PATH="$PATH:/home/oxlrivo/.dotfiles/bin/.local/bin"

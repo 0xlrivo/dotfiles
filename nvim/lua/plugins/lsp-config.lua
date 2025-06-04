@@ -19,8 +19,6 @@ return {
 					"lua_ls", -- Lua
 					"clangd", -- C
 					"rust_analyzer", -- Rust
-					"solidity_ls",
-					"ts_ls" -- Typescript
 				}
 			})
 		end
@@ -44,18 +42,6 @@ return {
 
 			-- Rust
 			lspconfig.rust_analyzer.setup({
-				capabilities = capabilities
-			})
-
-			-- Solidity
-			lspconfig.solidity_ls.setup({
-				capabilities = capabilities,
-				on_attach = on_attach,
-				filetypes = {"solidity"}
-			})
-
-			-- Typescript
-			lspconfig.ts_ls.setup({
 				capabilities = capabilities
 			})
 		end

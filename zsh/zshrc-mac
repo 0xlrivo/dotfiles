@@ -1,0 +1,29 @@
+# If you come from bash you might have to change your $PATH.
+# Load your oh-my-zsh installation
+export ZSH="$HOME/.oh-my-zsh"
+source $ZSH/oh-my-zsh.sh
+
+##########
+# THEME #
+########
+ZSH_THEME="robbyrussell"
+
+############
+# PLUGINS #
+##########
+plugins=(
+	git
+	zsh-autosuggestions
+	copybuffer
+)
+
+##########
+# ALIAS #
+########
+alias vi="nvim"
+alias ls="exa -1 --icons"
+alias rpi="ssh lrivo@raspberrypi"
+
+# second brain integration
+export SB_PATH="/Volumes/shared/SecondBrain"
+source ~/.dotfiles/zsh/second-brain-integration.zsh
